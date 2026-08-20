@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>(function(){try{var t=localStorage.getItem("mm-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <title>MoneroMaps — Monero-accepting places you can visit</title>
+  <meta name="description" content="An interactive map of real-world businesses that accept Monero (XMR). Part of the Monerica Network." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="mm-header">
+    <div class="mm-brand">
+      <img class="mm-logo" src="img/monero-logo.png" alt="Monero" width="40" height="40" />
+      <div>
+        <h1>MoneroMaps</h1>
+        <p class="mm-tag">Real-world places that accept Monero — part of the
+          <a href="/network.html">Monerica Network</a></p>
+      </div>
+    </div>
+    <div class="mm-header-actions">
+      <button id="mm-theme-toggle" class="mm-theme-btn" type="button" aria-label="Toggle dark mode">🌙</button>
+      <button id="mm-toggle" class="mm-toggle" aria-label="Toggle list">☰ Places</button>
+    </div>
+  </header>
+
+  <div class="mm-layout">
+    <aside id="mm-panel" class="mm-panel">
+      <div class="mm-panel-head">
+        <strong id="mm-count">Loading…</strong> places
+      </div>
+      <ul id="mm-list" class="mm-list"></ul>
+
+      <section class="mm-sponsors" id="mm-sponsors" hidden>
+        <div class="mm-sponsors-label">
+          Sponsors <span>· they keep the Monerica Network free</span>
+        </div>
+        <div class="mm-sponsor-track" id="mm-sponsor-track"></div>
+        <a class="mm-sponsors-cta" href="/sponsors.html">See all sponsors →</a>
+      </section>
+
+      <div class="mm-panel-foot">
+        Know a place that takes Monero?
+        <a href="https://app.monerica.com/submit" target="_blank" rel="noopener">Add it on Monerica →</a>
+      </div>
+    </aside>
+    <main id="mm-map" class="mm-map" aria-label="Map of Monero-accepting businesses"></main>
+  </div>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/sponsors.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

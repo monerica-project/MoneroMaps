@@ -1,0 +1,123 @@
+[
+  {
+    "slug": "booch-brew-co",
+    "name": "Booch Brew Co.",
+    "address": "Jaco & Uvita, Pacific Coast, Costa Rica",
+    "website": "https://www.instagram.com/boochbrewco/",
+    "country": "CR",
+    "desc": "Kombucha brewery",
+    "lat": 9.6156361,
+    "lon": -84.6281253,
+    "monerica": "https://monerica.com/site/booch-brew-co"
+  },
+  {
+    "slug": "callie-s-kitchen",
+    "name": "Callie's Kitchen",
+    "address": "100 Houston Street, Tomball, TX 77375",
+    "website": "https://callieskitchen.com",
+    "country": "US",
+    "desc": "Bakery & cafe",
+    "lat": 30.0996448,
+    "lon": -95.615111,
+    "monerica": "https://monerica.com/site/callie-s-kitchen"
+  },
+  {
+    "slug": "car-battery-lb",
+    "name": "Car Battery LB",
+    "address": "Zahle, Lebanon",
+    "website": "",
+    "country": "LB",
+    "desc": "Car batteries & accessories (since 1983)",
+    "lat": 33.8477069,
+    "lon": 35.9024955,
+    "monerica": "https://monerica.com/site/car-battery-lb"
+  },
+  {
+    "slug": "flatlands-coffee",
+    "name": "Flatlands Coffee",
+    "address": "138 N Main, Bowling Green, OH",
+    "website": "https://www.flatlandscoffee.com",
+    "country": "US",
+    "desc": "Coffee shop",
+    "lat": 41.3754997,
+    "lon": -83.6501172,
+    "monerica": "https://monerica.com/site/flatlands-coffee"
+  },
+  {
+    "slug": "mile-high-roasting-company",
+    "name": "Mile High Roasting Company",
+    "address": "1809 N 3000 West, Roosevelt, Utah 84066",
+    "website": "https://www.milehighroasting.com",
+    "country": "US",
+    "desc": "Coffee roaster",
+    "lat": 40.299403,
+    "lon": -109.9887605,
+    "monerica": "https://monerica.com/site/mile-high-roasting-company"
+  },
+  {
+    "slug": "running-water-farm",
+    "name": "Running Water Farm",
+    "address": "13300 Running Water Road, West Palm Beach, FL 33418",
+    "website": "https://runningwaterfarm.com/",
+    "country": "US",
+    "desc": "Farm",
+    "lat": 26.715364,
+    "lon": -80.0532942,
+    "monerica": "https://monerica.com/site/running-water-farm"
+  },
+  {
+    "slug": "sababa-chiang-mai",
+    "name": "Sababa Chiang Mai",
+    "address": "19 Kotchasarn Rd Lane 5, Chiang Mai 50100",
+    "website": "https://www.sababacm.com",
+    "country": "TH",
+    "desc": "Restaurant",
+    "lat": 18.7822097,
+    "lon": 98.9942105,
+    "monerica": "https://monerica.com/site/sababa-chiang-mai"
+  },
+  {
+    "slug": "satori-sandwich-bar",
+    "name": "Satori Sandwich Bar",
+    "address": "457A Danforth Ave, Toronto, ON M4K 1P1",
+    "website": "https://www.satorisandwichbar.com/",
+    "country": "CA",
+    "desc": "Sandwich bar",
+    "lat": 43.67757,
+    "lon": -79.35018,
+    "monerica": "https://monerica.com/site/satori-sandwich-bar"
+  },
+  {
+    "slug": "super-66",
+    "name": "Super 66",
+    "address": "Av. 66 3250, La Plata, Buenos Aires, Argentina",
+    "website": "",
+    "country": "AR",
+    "desc": "Supermarket",
+    "lat": -34.9397862,
+    "lon": -57.9498116,
+    "monerica": "https://monerica.com/site/super-66"
+  },
+  {
+    "slug": "travessa-restaurant",
+    "name": "travessa.restaurant",
+    "address": "Rua Marques de Paranagua, 30, Ilheus, Brazil",
+    "website": "https://instagram.com/travessarest",
+    "country": "BR",
+    "desc": "Restaurant",
+    "lat": -14.799482,
+    "lon": -39.0336926,
+    "monerica": "https://monerica.com/site/travessa-restaurant"
+  },
+  {
+    "slug": "ward-s-ace-and-country-store",
+    "name": "Ward's ACE & Country Store",
+    "address": "65 North 300 East, Malad City, Idaho 83252",
+    "website": "https://www.wardsace.com",
+    "country": "US",
+    "desc": "Hardware & country store",
+    "lat": 42.1867114,
+    "lon": -112.2377771,
+    "monerica": "https://monerica.com/site/ward-s-ace-and-country-store"
+  }
+]

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>(function(){try{var t=localStorage.getItem("mm-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <title>Sponsors — MoneroMaps</title>
+  <meta name="description" content="Sponsors that keep the Monerica Network free — MoneroMaps." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="mm-header">
+    <a class="mm-brand mm-brand-link" href="/">
+      <img class="mm-logo" src="img/monero-logo.png" alt="Monero" width="40" height="40" />
+      <div>
+        <h1>MoneroMaps</h1>
+        <p class="mm-tag">Sponsors of the
+          <a href="/network.html">Monerica Network</a></p>
+      </div>
+    </a>
+    <div class="mm-header-actions">
+      <button id="mm-theme-toggle" class="mm-theme-btn" type="button" aria-label="Toggle dark mode">🌙</button>
+      <a class="mm-back" href="/">← Map</a>
+    </div>
+  </header>
+
+  <main class="mm-page">
+    <h2 class="mm-page-title">Sponsors</h2>
+    <p class="mm-page-sub">These sponsors keep the Monerica Network free.
+      <a href="https://app.monerica.com/sponsors" target="_blank" rel="noopener">Become a sponsor →</a></p>
+    <div id="mm-all-sponsors" class="mm-sponsors-grid" aria-live="polite">
+      <p class="mm-empty" id="mm-sp-status">Loading sponsors…</p>
+    </div>
+  </main>
+
+  <script src="js/sponsors-all.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

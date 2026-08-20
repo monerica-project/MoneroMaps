@@ -1,0 +1,180 @@
+:root {
+  --xmr: #ff6600;
+  --xmr-dark: #d94e00;
+  --ink: #1b1b1f;
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --card-bg: #ffffff;
+  --subtle-bg: #fafafa;
+  --hover-bg: #fff5ee;
+  --muted: #6b6b73;
+  --line: #e6e6ea;
+}
+
+/* Dark theme — applied when the user picks it, OR when the OS prefers dark and
+   the user hasn't explicitly chosen light. */
+:root[data-theme="dark"] {
+  --ink: #e8e8ea;
+  --bg: #121216;
+  --panel: #17171c;
+  --card-bg: #1e1e24;
+  --subtle-bg: #1a1a1f;
+  --hover-bg: #26221b;
+  --muted: #9a9aa2;
+  --line: #2b2b33;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #e8e8ea;
+    --bg: #121216;
+    --panel: #17171c;
+    --card-bg: #1e1e24;
+    --subtle-bg: #1a1a1f;
+    --hover-bg: #26221b;
+    --muted: #9a9aa2;
+    --line: #2b2b33;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  display: flex; flex-direction: column;
+}
+
+/* Header */
+.mm-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: .55rem 1rem;
+  background: #1b1b1f; color: #fff;
+  border-bottom: 3px solid var(--xmr);
+  flex: 0 0 auto;
+}
+.mm-header-actions { display: flex; align-items: center; gap: .5rem; flex: 0 0 auto; }
+.mm-theme-btn {
+  background: transparent; border: 1px solid rgba(255,255,255,.28); color: #fff;
+  border-radius: 6px; padding: .35rem .5rem; cursor: pointer; font-size: 1rem; line-height: 1;
+}
+.mm-theme-btn:hover { border-color: var(--xmr); }
+.mm-brand { display: flex; align-items: center; gap: .7rem; }
+.mm-logo {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: block; flex: 0 0 auto;
+}
+.mm-header h1 { font-size: 1.15rem; margin: 0; letter-spacing: .2px; }
+.mm-tag { margin: .1rem 0 0; font-size: .78rem; color: #cfcfd6; }
+.mm-tag a { color: var(--xmr); text-decoration: none; }
+.mm-tag a:hover { text-decoration: underline; }
+.mm-toggle {
+  display: none; background: var(--xmr); color: #fff; border: 0;
+  padding: .5rem .8rem; border-radius: 6px; font-weight: 600; cursor: pointer;
+}
+
+/* Layout */
+.mm-layout { flex: 1 1 auto; display: flex; min-height: 0; }
+.mm-panel {
+  flex: 0 0 320px; background: var(--panel); border-right: 1px solid var(--line);
+  display: flex; flex-direction: column; min-height: 0;
+}
+.mm-panel-head { padding: .7rem 1rem; border-bottom: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
+.mm-panel-head strong { color: var(--ink); font-size: 1.1rem; }
+.mm-list { list-style: none; margin: 0; padding: 0; overflow-y: auto; flex: 1 1 auto; }
+.mm-item {
+  padding: .7rem 1rem; border-bottom: 1px solid var(--line); cursor: pointer;
+}
+.mm-item:hover, .mm-item.is-active { background: var(--hover-bg); }
+.mm-item h3 { margin: 0 0 .15rem; font-size: .95rem; }
+.mm-item .mm-cat { color: var(--xmr-dark); font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .3px; }
+.mm-item .mm-addr { color: var(--muted); font-size: .8rem; margin-top: .15rem; }
+.mm-panel-foot { padding: .8rem 1rem; border-top: 1px solid var(--line); font-size: .8rem; color: var(--muted); }
+.mm-panel-foot a { color: var(--xmr-dark); font-weight: 600; text-decoration: none; }
+
+.mm-map { flex: 1 1 auto; min-height: 0; }
+
+/* Monero-logo marker */
+.mm-marker {
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .45);
+  transition: transform .12s ease;
+}
+.mm-marker:hover { transform: scale(1.15); }
+
+/* Popups (theme-aware via variables) */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--card-bg); color: var(--ink); }
+.leaflet-popup-content { margin: .7rem .9rem; font-size: .9rem; }
+.mm-pop h3 { margin: 0 0 .25rem; font-size: 1rem; }
+.mm-pop .mm-cat { color: var(--xmr-dark); font-size: .72rem; font-weight: 700; text-transform: uppercase; }
+.mm-pop .mm-addr { color: var(--muted); margin: .3rem 0; }
+.mm-pop a { color: var(--xmr-dark); font-weight: 600; text-decoration: none; }
+.mm-pop .mm-links { margin-top: .4rem; display: flex; gap: .8rem; flex-wrap: wrap; }
+.mm-pop .mm-flag { color: var(--muted); margin: .3rem 0; }
+
+/* Country flag */
+.mm-flag-emoji { font-size: 1.05rem; line-height: 1; vertical-align: -1px; }
+
+/* Sponsors (live Monerica Network feed) */
+.mm-sponsors { border-top: 1px solid var(--line); padding: .7rem 1rem .55rem; background: var(--subtle-bg); flex: 0 0 auto; }
+.mm-sponsors-label { font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; color: var(--xmr-dark); font-weight: 700; margin-bottom: .5rem; }
+.mm-sponsors-label span { color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: 0; }
+.mm-sponsor-track { transition: opacity .18s ease; min-height: 74px; }
+.mm-sponsor-card { display: block; text-decoration: none; color: var(--ink); border: 1px solid var(--line); border-radius: 7px; padding: .55rem .65rem; background: var(--card-bg); }
+.mm-sponsor-card:hover { border-color: var(--xmr); }
+.mm-sp-badge { display: inline-block; font-size: .62rem; text-transform: uppercase; letter-spacing: .04em; color: #fff; background: var(--xmr); border-radius: 4px; padding: .06rem .35rem; margin-bottom: .3rem; }
+.mm-sp-name { display: block; font-weight: 700; font-size: .9rem; }
+.mm-sp-desc { display: block; color: var(--muted); font-size: .78rem; margin-top: .15rem; }
+.mm-sp-rating { display: inline-block; margin-top: .3rem; font-size: .76rem; color: var(--xmr-dark); font-weight: 600; }
+.mm-sp-count { color: var(--muted); font-weight: 400; }
+.mm-sponsors-cta { display: inline-block; margin-top: .5rem; font-size: .76rem; color: var(--xmr-dark); font-weight: 600; text-decoration: none; }
+.mm-sponsors-cta:hover { text-decoration: underline; }
+
+/* Clickable brand (sponsors / network pages) */
+.mm-brand-link { text-decoration: none; color: inherit; }
+.mm-back {
+  color: #fff; background: var(--xmr); border-radius: 6px;
+  padding: .4rem .7rem; font-weight: 600; text-decoration: none; font-size: .85rem;
+  flex: 0 0 auto;
+}
+.mm-back:hover { background: var(--xmr-dark); }
+
+/* Standalone content pages (sponsors, network) */
+.mm-page {
+  flex: 1 1 auto; overflow-y: auto;
+  padding: 1.6rem 1.25rem 3rem; max-width: 1080px; width: 100%; margin: 0 auto;
+}
+.mm-page-title { margin: 0 0 .3rem; font-size: 1.55rem; }
+.mm-page-sub { margin: 0 0 1.4rem; color: var(--muted); font-size: .92rem; line-height: 1.6; }
+.mm-page-sub a { color: var(--xmr-dark); font-weight: 600; text-decoration: none; }
+.mm-page-sub a:hover { text-decoration: underline; }
+.mm-empty { color: var(--muted); }
+
+/* Sponsors grid (/sponsors.html) — reuses .mm-sponsor-card */
+.mm-sponsors-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .85rem;
+}
+
+/* Network grid (/network.html) */
+.mm-net-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .85rem;
+}
+.mm-net-card {
+  display: block; text-decoration: none; color: var(--ink);
+  border: 1px solid var(--line); border-radius: 9px; padding: .85rem 1rem; background: var(--card-bg);
+}
+a.mm-net-card:hover { border-color: var(--xmr); }
+.mm-net-card h3 { margin: 0 0 .3rem; font-size: 1rem; }
+.mm-net-card p { margin: 0; color: var(--muted); font-size: .85rem; line-height: 1.5; }
+.mm-net-here { color: var(--xmr-dark); font-weight: 600; font-size: .8rem; }
+.mm-net-follow { margin: 2rem 0 .6rem; font-size: 1.05rem; }
+
+@media (max-width: 720px) {
+  .mm-toggle { display: block; }
+  .mm-panel {
+    position: absolute; z-index: 1200; top: 62px; bottom: 0; left: 0; width: 85%;
+    max-width: 340px; transform: translateX(-100%); transition: transform .2s ease;
+    box-shadow: 3px 0 12px rgba(0,0,0,.2);
+  }
+  .mm-panel.is-open { transform: translateX(0); }
+}
