@@ -5,17 +5,17 @@
 
   var map = L.map("mm-map", { scrollWheelZoom: true }).setView([20, 0], 2);
 
-  // Tiles — no Google, no API key. Light = OpenStreetMap; dark = CARTO Dark Matter.
+  // Tiles — no Google, no API key. Both themes use OpenStreetMap; dark mode is OSM
+  // inverted via CSS (the "mm-tiles-dark" class). We dropped CARTO's dark basemap because
+  // CARTO now serves an "API KEY REQUIRED" watermark tile to keyless requests.
+  var OSM_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
   var LIGHT_TILES = {
     url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    opts: { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }
+    opts: { maxZoom: 19, attribution: OSM_ATTR }
   };
   var DARK_TILES = {
-    url: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-    opts: {
-      maxZoom: 20, subdomains: "abcd",
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-    }
+    url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    opts: { maxZoom: 19, className: "mm-tiles-dark", attribution: OSM_ATTR }
   };
 
   function isDark() {

@@ -94,6 +94,10 @@ body {
 
 .mm-map { flex: 1 1 auto; min-height: 0; }
 
+/* Dark basemap without an API key: invert the OpenStreetMap tiles. Only the tile layer
+   carries the .mm-tiles-dark class, so markers/popups are untouched. */
+.mm-tiles-dark { filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9) saturate(0.6); }
+
 /* Monero-logo marker */
 .mm-marker {
   border-radius: 50%;
