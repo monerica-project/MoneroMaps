@@ -110,6 +110,17 @@
     "monerica": "https://monerica.com/site/travessa-restaurant"
   },
   {
+    "slug": "veldt-gold",
+    "name": "Veldt Gold",
+    "address": "861 6th Ave #504, San Diego, CA 92101",
+    "website": "https://veldtgold.com",
+    "country": "US",
+    "desc": "Gold, silver, platinum & palladium dealer",
+    "lat": 32.7154106,
+    "lon": -117.159047,
+    "monerica": "https://monerica.com/site/veldt-gold"
+  },
+  {
     "slug": "ward-s-ace-and-country-store",
     "name": "Ward's ACE & Country Store",
     "address": "65 North 300 East, Malad City, Idaho 83252",
